@@ -7,6 +7,72 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/posezení.jpeg"/>
+        </Grid.Background>
+        <Button Content="Open" 
+                HorizontalAlignment="Left" 
+                Margin="220,360,0,0" 
+                VerticalAlignment="Top" 
+                Height="58" 
+                Width="122" 
+		        BorderBrush="White" 
+		        Click="OPN_Button_Click" Background="WhiteSmoke"/>
+        <Button Content="write" 
+                HorizontalAlignment="Right" 
+                Margin="0,360,220,0"
+                IsEnabled="False"
+                VerticalAlignment="Top" 
+                RenderTransformOrigin="2.475,-5.589" 
+                Height="58" 
+                Width="135" 
+                BorderBrush="Black" 
+                Click="WRT_Button_Click"
+                x:Name="btnwrite" 
+                Foreground="Black"/>
+        <TextBox HorizontalAlignment="Left" 
+                 Margin="510,112,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="" 
+                 VerticalAlignment="Top"
+                 TextChanged="textvstup_TextChanged"
+                 Width="280" 
+                 Height="231" BorderBrush="Black"
+                 x:Name="textvstup">
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.75"/>
+            </TextBox.Background>
+        </TextBox>
+        <ScrollViewer Margin="10,67,483,91"
+                      >
+            <TextBlock 
+                   Margin="10,50,0,0" 
+                   TextWrapping="Wrap"                   
+                   Text="" 
+                   Width="278" 
+                   Height="270"
+                   ScrollViewer.CanContentScroll="True"
+                   ScrollViewer.VerticalScrollBarVisibility="Auto"
+                   x:Name="textvystup">
+                <TextBlock.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </TextBlock.Background>
+            </TextBlock>
+        </ScrollViewer>
 
+        <Rectangle x:Name="status"
+                   HorizontalAlignment="Left" 
+                   Height="40" 
+                   Margin="630,15,0,0" 
+                   Stroke="Black" 
+                   VerticalAlignment="Top"
+                   Width="40"/>
+        <Label 
+            Content="Vstup nového záznamu zde:" 
+            HorizontalAlignment="Left" 
+            Height="44" Margin="480,57,0,0" 
+            VerticalAlignment="Top" 
+            Width="310" FontSize="24" Foreground="Red"/>
     </Grid>
+
 </Window>
